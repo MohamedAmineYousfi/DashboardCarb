@@ -207,13 +207,15 @@ console.log(map,'maaaaap')
             maxW="2000px"
             flexDir={["column", "column","column"]}
             overflow="hidden"
-            bg={'red.200'}
+            xs={12}
+              sm={6}
+              lg={4}
         >
             {/* Column 1 */}
             <Flex
                 w={["100%", "100%", "100%", "100%", "100%"]}
                 alignItems="center"
-                backgroundColor="#000000"
+                // backgroundColor="#000000"
                 // color="#fff"
                 h={'10%'}
             >
@@ -246,21 +248,51 @@ console.log(map,'maaaaap')
                  <Flex flex={"2"} bg={"#fff"} borderRadius={"5px"} p={"10px"} boxShadow={"0 1px 2px rgba(0,0,0,0.2)"} >
                  <img className="mb-4" alt="" width="100%" height="200" src="imagecarsRoad.jpg" />
                  </Flex>
-                 <Flex flex={"4"} bg={"red.200"} w={"100%"}><Text>hello 2 </Text></Flex>
+                 <Flex flex={"4"} bg={"#ffffff"} w={"100%"} flexDir={"column"} borderBottom={"revert"} borderBottomColor={"green.200"}>
+                 <Flex flex={"2"} bg={'#ffffff'} flexDir={"row"} >
+                   <Flex flex={"1.5"} bg={'#ffffff'} flexDir={"column"} marginLeft={"5"}><Flex flex={"1"} ><Text fontSize='xs'> Car 53min</Text></Flex><Flex flex={"4"} ><img className="mb-4" alt="" width="50%" height="100%" src="shargil1.jpg" /></Flex><Flex flex={"1"}><Text fontSize='xs'> haider haier</Text></Flex></Flex>
+                   <Flex flex={"4"} align={"center"}><Text fontSize={'xl'}>Harry Luckford</Text></Flex>
+                   <Flex flex={"2"} bg={'#ffffff'} flexDir={"row"}><Flex flex={"2"} bg={'#ffffff'}></Flex><Flex flex={"2"} align={"center"}><Text fontSize={'2xl'}>43</Text></Flex></Flex>
+                 </Flex>
+
+                 <Flex flex={"2"}>
+                   <Flex flex={"2"} bg={'#ffffff'}><img className="mb-4" alt="" width="70%" height="150" src="shargil1.jpg" /></Flex>
+                   <Flex flex={"4"} align={"center"}><Text fontSize={'xl'}>Julian Baumagarter</Text></Flex>
+                   <Flex flex={"2"} bg={'#ffffff'} flexDir={"row"}><Flex flex={"2"} bg={'#ffffff'}></Flex><Flex flex={"2"} align={"center"}><Text fontSize={'2xl'}>36</Text></Flex></Flex>
+                 </Flex>
+
+                 <Flex flex={"2"}bg={'#ffffff'}>
+                 <Flex flex={"2"} bg={'#ffffff'}><img className="mb-4" alt="" width="70%" height="150" src="shargil1.jpg" /></Flex>
+                   <Flex flex={"4"} align={"center"}><Text fontSize={'xl'}>Nazar Khan</Text></Flex>
+                   <Flex flex={"2"} bg={'#ffffff'} flexDir={"row"}><Flex flex={"2"} bg={'#ffffff'}></Flex><Flex flex={"2"} align={"center"}><Text fontSize={'2xl'}>80</Text></Flex></Flex>
+                 </Flex>
+
+                 <Flex flex={"2"}>
+                  <Flex flex={"2"} bg={'#ffffff'}><img className="mb-4" alt="" width="70%" height="150" src="shargil1.jpg" /></Flex>
+                   <Flex flex={"4"} align={"center"}><Text fontSize={'xl'}>Olena Petruk</Text></Flex>
+                   <Flex flex={"2"} bg={'#ffffff'} flexDir={"row"}><Flex flex={"2"} bg={'#ffffff'}></Flex><Flex flex={"2"} align={"center"}><Text fontSize={'2xl'}>31</Text></Flex></Flex>
+                 </Flex>
+
+                 <Flex flex={"2"} bg={'#ffffff'}>
+                 <Flex flex={"2"} bg={'#ffffff'}><img className="mb-4" alt="" width="70%" height="150" src="shargil1.jpg" /></Flex>
+                   <Flex flex={"4"} align={"center"}><Text fontSize={'xl'}>Judi Lee</Text></Flex>
+                   <Flex flex={"2"} bg={'#ffffff'} flexDir={"row"}><Flex flex={"2"} bg={'#ffffff'}></Flex><Flex flex={"2"} align={"center"}><Text fontSize={'2xl'}>77</Text></Flex></Flex>
+                 </Flex>
+                 </Flex>
              </Flex>
 
 
 
                      {/* //box droite sup 1 */}
-                     <Flex position={'absolute'} borderRadius={"20px"} w={"22%"} h={"5%"} marginTop={"30px"} marginLeft={"1100px"} zIndex={"1"} flexDir={"row"}>
+                     {/* <Flex position={'absolute'} borderRadius={"20px"} w={"22%"} h={"5%"} marginTop={"30px"} marginLeft={"1100px"} zIndex={"1"} flexDir={"row"}>
                  <Flex flex={"1"} bg={"#fff"} borderRadius={"20px"} p={"5px"} boxShadow={"0 1px 2px rgba(0,0,0,0.2)"} >
                          <Flex flex={"0.5"} bg={"green.200"} borderRadius={"20px"} p={"10px"} boxShadow={"0 1px 2px rgba(0,0,0,0.2)"} >
                      <Text margin={'-13px 10px 10px'} color={"white"}>Origin locations</Text>
-                 </Flex> </Flex>
+                 </Flex> </Flex> */}
                  {/* <Flex flex={"4"} bg={"red.200"} w={"100%"}><Text>hello 2 </Text></Flex> */}
-             </Flex>
+             {/* </Flex> */}
              {/* //box droite Sup 2 */}
-             <Flex position={'absolute'} w={"22%"} h={"50%"} marginTop={"80px"} marginLeft={"1100px"} zIndex={"1"} flexDir={"column"}>
+             {/* <Flex position={'absolute'} w={"22%"} h={"50%"} marginTop={"80px"} marginLeft={"1100px"} zIndex={"1"} flexDir={"column"}>
                  <Flex flex={"1"} bg={"#fff"} borderRadius={"4px"} p={"10px"} boxShadow={"0 1px 2px rgba(0,0,0,0.2)"} >
                      <h2 margin={"0 0 10px"}>Most popular offices</h2>
                  </Flex>
@@ -283,14 +315,14 @@ console.log(map,'maaaaap')
                      <h2 margin={"0 0 10px"}>Most popular offices</h2>
                  </Flex>
                
-             </Flex>
+             </Flex> */}
                  {/* //box drte Inf */}
-                 <Flex position={'absolute'}  w={"22%"} h={"25%"} marginTop={"450px"} marginLeft={"1100px"} zIndex={"1"} flexDir={"column"}>
+                 {/* <Flex position={'absolute'}  w={"22%"} h={"25%"} marginTop={"450px"} marginLeft={"1100px"} zIndex={"1"} flexDir={"column"}>
                  <Flex flex={"1"} bg={"#fff"} borderRadius={"4px"} p={"10px"} boxShadow={"0 1px 2px rgba(0,0,0,0.2)"} >
                      <h2 margin={"0 0 10px"}>Most popular carpool</h2>
                  </Flex>
                
-             </Flex>
+             </Flex> */}
              
             </Flex>
 

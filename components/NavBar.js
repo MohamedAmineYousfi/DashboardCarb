@@ -10,8 +10,28 @@ const NavBar = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <NavBarContainer {...props}>
-      <Logo
+    <NavBarContainer {...props} >
+      <Flex flex={"4"} >
+        <Logo
+       flexDir='row'
+      //  marginTop="10"
+        w="900px"
+        color={["white", "white", "primary.500", "primary.500"]}
+      /></Flex>
+
+
+      <Flex flex={"2"} bg={"green.400"} flexDir={"row"} h={"100%"} width={'100%'}>
+        <Flex flex={"2"} borderRadius={"2xl"}><img borderRaduis={"20"} className="mb-4" alt="" width="50%" height="100%" src="shargil1.jpg" /></Flex> 
+        <Flex flex={"4"}  flexDir={'column'}><Flex flex={"2"}><Text>Shargiil B</Text></Flex><Flex flex={"2"}><Text>CSO</Text></Flex></Flex>
+        {/* <MenuToggle toggle={toggle} isOpen={isOpen}  align={"center"}/> 
+        
+        <MenuItem to="/features" color={"black"} >Shargiil B </MenuItem>  */}
+        </Flex>
+
+
+      <Flex flex={"2"} ><MenuLinks isOpen={isOpen} /></Flex>
+   
+      {/* <Logo
        flexDir='row'
        marginTop="10"
         w="900px"
@@ -19,7 +39,7 @@ const NavBar = (props) => {
       />
       
       <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <MenuLinks isOpen={isOpen} />
+      <MenuLinks isOpen={isOpen} /> */}
     </NavBarContainer>
   );
 };
@@ -66,7 +86,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
     <Link href={to}>
-      <Text display="block" marginTop={'10'} color={"green.200"} {...rest}>
+      <Text display="block" color={"green.200"} {...rest}>
         {children}
       </Text>
     </Link>
@@ -75,24 +95,24 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
 
 const MenuLinks = ({ isOpen }) => {
   return (
-    <Box
-      display={{ base: isOpen ? "block" : "none", md: "block" }}
-      flexBasis={{ base: "100%", md: "auto" }}
+    <Flex
+
+     flexDir={'row'}
     >
-      <Stack
-        spacing={8}
+      {/* <Stack
+        spacing={2}
         align="center"
-        justify={["center", "space-between", "flex-end", "flex-end"]}
-        direction={["column", "row", "row", "row"]}
-        // pt={[0, 0, 0, 0]}
-      >
+   
+        direction={["row"]} */}
+        {/* // pt={[0, 0, 0, 0]} */}
+    
+      {/* // > */}
         {/* <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/how">How It works </MenuItem>*/}
-        <Flex w={"60"} h={"100%"} bg={"green.200"} align={"center"}>
-        <MenuItem to="/features" color={"black"} >Shargiil B </MenuItem> </Flex>
-        {/* <Identif w='200px'/> */}
-        <MenuItem to="/Menu">Menu </MenuItem>
-        <MenuItem to="/signup" isLast>
+     <Flex flex={"2"} ml={"20"} align={"center"}><Text color={"green.400"}>Menu</Text></Flex>
+ 
+        {/* <MenuItem to="/Menu"  ml={"24"} mr={"2"}>Menu </MenuItem> */}
+      
           {/* <Button
             size="sm"
             rounded="md"
@@ -104,13 +124,16 @@ const MenuLinks = ({ isOpen }) => {
           >
             Create Account
           </Button> */}
-          <Flex marginTop='10'>
+          <Flex marginRight={'20%'} >
           <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.22 8.98c-.724.19-1.356.76-1.669 1.504-.24.574-.231 1.584.021 2.143.243.54.69 1.02 1.184 1.271l.397.202h35.714l.397-.202c.493-.25.94-.73 1.183-1.27.252-.56.262-1.57.021-2.144a2.694 2.694 0 0 0-1.166-1.308l-.435-.233-17.704-.013c-9.737-.007-17.811.015-17.943.05zm-.106 13.505c-.643.215-1.225.755-1.544 1.431-.145.308-.178.51-.178 1.091 0 .607.03.775.202 1.132.24.501.663.958 1.136 1.229l.346.198h35.868l.384-.224c.855-.498 1.302-1.3 1.302-2.335 0-1.036-.447-1.838-1.302-2.335l-.384-.224-17.82-.014c-9.8-.008-17.904.015-18.01.05zm-.47 13.701c-1.783 1.008-1.695 3.688.152 4.692l.357.193h35.714l.435-.233a2.694 2.694 0 0 0 1.166-1.308c.241-.574.231-1.584-.02-2.143-.244-.54-.691-1.02-1.184-1.271l-.397-.202h-17.87l-17.87-.002-.484.274z" fill="#5EBABB"/>
-</svg></Flex>
+    </svg>
+          </Flex>  
+          <MenuItem to="/signup" isLast>
+        
         </MenuItem>
-      </Stack>
-    </Box>
+      {/* </Stack> */}
+    </Flex>
   );
 };
 
@@ -121,9 +144,10 @@ const NavBarContainer = ({ children, ...props }) => {
       align="center"
       justify="space-between"
       wrap="wrap"
+      // flexDir={"row"} 
       w="100%"
-    //   mb={2}
-      marginBottom={8}
+      // mb={2}
+      // marginBottom={8}
       bg={["primary.500", "primary.500","primary.500", "transparent", "transparent"]}
       color={["white", "white","white", "primary.700", "primary.700"]}
       {...props}

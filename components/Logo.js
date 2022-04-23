@@ -7,7 +7,7 @@ export default function Logo(props) {
         <Flex flexDir="row"  w="40%">
 <img className="mb-4" alt="" width="200" height="200" src="logocarb.jpg" /></Flex>
 
-<Flex  marginLeft='10' w="60%" marginTop="2">
+<Flex  marginLeft='10' w="60%" marginTop="2" marginRight={'10'}>
    <SearchBar width="900"/> 
 </Flex>
     </Flex>
